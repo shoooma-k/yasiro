@@ -1,0 +1,560 @@
+@charset "utf-8";
+
+:root {
+  --title-font: "Yuji Boku", "Yuji Syuku", serif;
+  --body-font: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+body {
+  margin: 0;
+  background: #c70101;
+  background-image:
+    radial-gradient(1000px 400px at 50% -10%, rgba(0, 0, 0, .04), transparent 40%),
+    repeating-linear-gradient(25deg, rgba(255, 255, 255, 0) 0 6px, rgba(255, 255, 255, .14) 6px 7px),
+    repeating-linear-gradient(-25deg, rgba(255, 255, 255, 0) 0 8px, rgba(255, 255, 255, .10) 8px 9px),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/><feComponentTransfer><feFuncA type='table' tableValues='0 0.10'/></feComponentTransfer></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-repeat: no-repeat, repeat, repeat, repeat;
+  background-size: auto, 280px 280px, 300px 300px, 256px 256px;
+  background-blend-mode: normal, overlay, overlay, normal;
+  font-family: var(--body-font);
+}
+
+header {
+  display: grid;
+  padding: 0;
+  margin: 0;
+  grid-template-columns: 60px 1fr 60px;
+  grid-template-rows: 60px;
+}
+
+#home {
+  background: #cc3838;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+#home img {
+  display: block;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+}
+
+.txt-home {
+  color: #fff;
+  font-size: 8px;
+  text-align: center;
+}
+
+
+#center-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#center-header h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+  letter-spacing: .3em;
+}
+
+
+#nav-toggle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 12px 8px;
+  background: #cc3838
+}
+
+#nav-toggle .menu-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+#nav-toggle .menu-bar span {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.txt-menu {
+  color: #fff;
+  font-size: 8px;
+  padding-top: 2px;
+}
+
+#nav-toggle.is-open .menu-bar span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#nav-toggle.is-open .menu-bar span:nth-child(2) {
+  opacity: 0;
+}
+
+#nav-toggle.is-open .menu-bar span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+#menu-container {
+  display: blok;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  width: 100%;
+  position: fixed;
+  animation: menus 2s;
+  opacity: 0;
+  transition:
+    opacity .5s ease,
+    visibility .5s linear;
+  visibility: hidden;
+}
+
+#menu-container.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+#menu-container ul {
+  margin: 0;
+  padding: 0;
+}
+
+#menu-container li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #fff;
+  display: flex;
+  background: rgb(179, 0, 0);
+  cursor: pointer;
+}
+
+#menu-container img {
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+}
+
+#menu-container div {
+  margin-left: 10px;
+}
+
+#menu-container h3 {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  height: 25px;
+}
+
+#menu-container p {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  height: 25px;
+  opacity: .5;
+}
+
+
+
+
+
+main {
+  width: 100%;
+  margin: 0 auto;
+  color: #fff;
+}
+
+#title>img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+#title h2 {
+  text-align: center;
+  font-size: 42px;
+  margin: 0;
+  letter-spacing: 0.2em;
+}
+
+#title h3 {
+  text-align: center;
+  font-size: 16px;
+  margin: 0;
+  letter-spacing: 0.4em;
+  white-space: nowrap;
+}
+
+#subtitle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#subtitle-container p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+#subtitle-container img {
+  height: 56px;
+  width: auto;
+}
+
+.circle-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  /* background: pink; */
+  margin: 0 auto;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle1 {
+  background: rgb(210, 0, 0);
+  width: 250px;
+  height: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgb(210, 0, 0) 60%, rgb(116, 1, 1) 70%);
+}
+
+.circle2 {
+  background: rgb(167, 0, 0);
+  width: 220px;
+  height: 220px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.circle3 {
+  width: 220px;
+  height: 220px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(120, 0, 0, 0) 60%, rgba(33, 0, 0, 0.699) 80%);
+}
+
+.circle-container img {
+  position: absolute;
+  width: 50px;
+  object-fit: contain;
+  transform-origin: center center;
+  transform: rotate(0deg);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.777);
+}
+
+
+#home-page .pull-omikuji {
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: .2px solid #fff;
+  cursor: pointer;
+}
+
+#home-page .pull-omikuji>div {
+  margin: 0 auto;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: .2px solid #fff;
+  cursor: pointer;
+}
+
+#home-page .pull-omikuji p {
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+  letter-spacing: .1em;
+}
+
+#home-page .pull-omikuji>div:hover {
+  background: rgba(255, 255, 255, 0.171);
+  border-top: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+}
+
+/* おみくじを引くページ */
+#pull-page {
+  text-align: center;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.page-title img {
+  width: 120px;
+  height: 100%;
+}
+
+.page-title h3 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: .1em;
+}
+
+.page-title p {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: .3em;
+  opacity: .5;
+}
+
+#pull-page>p {
+  margin: 0;
+  padding-top: 16px;
+  font-size: 14px;
+}
+
+#omikuji-container {
+  display: inline-block;
+  width: 95%;
+  margin-top: 20px;
+  text-align: left;
+}
+
+#omikuji-container img {
+  width: 50px;
+  height: 100%;
+  margin: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.777);
+  cursor: pointer;
+}
+
+#omikuji-container img:hover {
+  opacity: .8;
+}
+
+#add-omikuji {
+  margin: 16px auto;
+  width: 220px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: .2px solid #fff;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+#add-omikuji>div {
+  margin: 0 auto;
+  width: 220px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: .2px solid #fff;
+  cursor: pointer;
+}
+
+#add-omikuji p {
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+  letter-spacing: .1em;
+}
+
+#add-omikuji>div:hover {
+  background: rgba(255, 255, 255, 0.171);
+  border-top: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+}
+
+#add-omikuji.is-visible {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* おみくじの結果ページ */
+
+#omikuji-paper {
+  display: flex;
+  background: #fff;
+  color: rgb(225, 0, 0);
+  width: 95%;
+  /* height: 1500px; */
+  margin: 24px auto 0;
+}
+
+#omikuji-paper>div {
+  width: 100%;
+  margin: 25px;
+  border: solid 2px rgba(225, 0, 0, 0.825);
+  outline: 5px solid rgba(225, 0, 0, 0.825);
+  outline-offset: 4px;
+}
+
+#result-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  border-bottom: dotted 2px rgba(225, 0, 0, 0.825);
+}
+
+#result-top img {
+  width: 50px;
+  margin: 0 auto;
+}
+
+#result-top h1 {
+  font-size: 24px;
+  letter-spacing: .3em;
+}
+
+#result-fortune {
+  border-bottom: dotted 2px rgba(225, 0, 0, 0.825);
+  text-align: center;
+}
+
+#result-fortune div {
+  display: flex;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(225, 0, 0, 0.825);
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  margin: 16px auto 0;
+  font-size: 32px;
+}
+
+#result-fortune p {
+  margin: 5px;
+}
+
+
+#result-advice {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  writing-mode: vertical-rl;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: dotted 2px rgba(225, 0, 0, 0.825);
+}
+
+#result-advice div {
+  margin: 8px;
+  width: 24px;
+  text-align: center;
+  height: 40px;
+  border: solid 1px rgba(225, 0, 0, 0.825);
+}
+
+#result-advice span {
+  margin: 8px;
+  width: 24px;
+  text-align: center;
+  height: 40px;
+  border: solid 1px #fff;
+}
+
+#result-advice p {
+  margin: 16px auto 0;
+  line-height: 2;
+}
+
+#result-detail {
+  width: 100%;
+  writing-mode: vertical-rl;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: dotted 2px rgba(225, 0, 0, 0.825);
+  display: flex;
+}
+
+#result-detail ul {
+  display: flex;
+  padding: 8px;
+  margin: 0;
+  width: 100%;
+  list-style: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#result-detail li {
+  display: flex;
+  padding: 0;
+  margin: 8px 8px;
+}
+
+#result-detail .content {
+  height: 70px;
+  margin: 0;
+}
+
+#result-detail .import {
+  color: black;
+  margin: 0;
+}
+
+#result-bottom {
+  text-align: center;
+}
+
+#result-bottom > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+#result-bottom img {
+  width: 40px;
+  margin: 0 6px;
+}
+
+#result-bottom h1 {
+  font-size:20px;
+  letter-spacing: .3em;
+  margin: 0;
+}
+
+#result-bottom > img {
+  width: 100px;
+}
+
+#result-bottom p {
+  color: black;
+  opacity: .8;
+  margin: 0 0 16px;
+  font-size: 12px;
+}

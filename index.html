@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./img/Omikuji_favicon.ico">
+  <title>みくじの社</title>
+  <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&family=Noto+Serif+JP:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div id="home">
+      <img src="img/MIkujinoyasiro_logo.png">
+      <div class="txt-home">HOME</div>
+    </div>
+    <div id="center-header">
+      <h2>みくじの社</h2>
+    </div>
+    <div id="nav-toggle">
+      <div class="menu-bar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="txt-menu">MENU</div>
+    </div>
+  </header>
+
+  <div id="menu-container">
+    <ul>
+      <li class="menu-item">
+        <img src="img/MIkujinoyasiro_logo.png">
+        <div>
+          <h3>みくじの社について</h3>
+          <p>ABOUT OMIKUJI-NO-YASIRO</p>
+        </div>
+      </li>
+      <li class="menu-item pull-omikuji">
+        <img src="img/OmikujiwoHiku.png">
+        <div>
+          <h3>おみくじを引く</h3>
+          <p>DRAW A FORTUNE</p>
+        </div>
+      </li>
+      <li class="menu-item">
+        <img src="img/OmikujiMusubidokoro.png">
+        <div>
+          <h3>おみくじ結び所</h3>
+          <p>KNOTTING THE FORTUNE</p>
+        </div>
+      </li>
+      <li class="menu-item">
+        <img src="img/Osirase.png">
+        <div>
+          <h3>お知らせ</h3>
+          <p>INFORMATION</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+  <main>
+    <section id="home-page" hidden>
+      <div id="title">
+        <img src="img/MIkujinoyasiro_logo.png">
+        <h2>みくじの社</h2>
+        <h3>MIKUJI - NO - YASIRO</h3>
+        <div id="subtitle-container">
+          <p>今日をひらく</p>
+          <img src="img/MuryouOmikuji.png">
+          <p>小さなご神託</p>
+        </div>
+      </div>
+
+      <div class="circle-container">
+        <div class="circle circle1"></div>
+        <div id="hole" class="circle circle2">
+          <!-- <img src="img/OmikujiHuda36KB.jpg"> -->
+        </div>
+        <div class="circle circle3"></div>
+      </div>
+
+      <div class="pull-omikuji">
+        <div>
+          <p>おみくじを引く</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pull-page" hidden>
+      <div class="page-title">
+        <img src="img/OmikujiwoHiku.png">
+        <h3>おみくじを引く</h3>
+        <p>DRAW A FORTUNE</p>
+      </div>
+      <p>心を静めて、今のご神託をいただきましょう。この一枚のおみくじは、偶然ではなく必然の導き。今日の歩みを照らす小さな光となりますように。</p>
+      <div id="omikuji-container">
+      </div>
+      <div id="add-omikuji" class="pull-omikuji is-visible">
+        <div>
+          <p>おみくじを追加する</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="result-page">
+      <div class="page-title">
+        <img src="img/OmikujiMusubidokoro.png">
+        <h3>おみくじの結果</h3>
+        <p>KNOTTING THE FORTUNE</p>
+      </div>
+      <div id="omikuji-paper">
+        <div>
+          <div id="result-top">
+            <img src="img/Mikujinoyasiro_log_red.png">
+            <h1>みくじの社</h1>
+            <img src="img/muryoumikuji_red.png">
+          </div>
+          <div id="result-fortune">
+            <!-- <div>大吉</div> -->
+            <p>運勢</p>
+          </div>
+          <div id="result-advice">
+            <div>助言</div>
+            <!-- <p>今こそ前進するとき。強い想いがあるならば、過去を振り返らずに、前を見よ。</p> -->
+            <span></span>
+          </div>
+          <div id="result-detail">
+            <ul>
+              <li id="result-wish">
+                <p class="content">願事</p>
+                <!-- <p class="import">多くを望まなければ必ず叶う。</p> -->
+              </li>
+              <li id="result-love">
+                <p class="content">恋愛</p>
+                <!-- <p class="import">多くを望まなければ必ず叶う。</p> -->
+              </li>
+              <li id="result-visitor">
+                <p class="content">待人</p>
+                <!-- <p class="import">多くを望まなければ必ず叶う。</p> -->
+              </li>
+              <li id="result-business">
+                <p class="content">商売</p>
+                <!-- <p class="import">多くを望まなければ必ず叶う。</p> -->
+              </li>
+              <li id="result-travel">
+                <p class="content">旅立</p>
+                <!-- <p class="import">多くを望まなければ必ず叶う。</p> -->
+              </li>
+              <li id="result-study">
+                <p class="content">学問</p>
+                <!-- <p class="import">多くを望まなければ必ず叶う。</p> -->
+              </li>
+              <li id="result-illness">
+                <p class="content">病気</p>
+                <!-- <p class="import">多くを望まなければ必ず叶う。</p> -->
+              </li>
+            </ul>
+          </div>
+          <div id="result-detail">
+            <ul>
+              <li id="result-charm">
+                <p class="content">開運物</p>
+                <!-- <p class="import">漫画</p> -->
+              </li>
+              <li id="result-spot">
+                <p class="content">開運場所</p>
+                <!-- <p class="import">漫画</p> -->
+              </li>
+              <li id="result-ally">
+                <p class="content">開運人物</p>
+                <!-- <p class="import">漫画</p> -->
+              </li>
+              <li id="result-color">
+                <p class="content">開運色</p>
+                <!-- <p class="import">漫画</p> -->
+              </li>
+              <li id="result-curse">
+                <p class="content">不運物</p>
+                <!-- <p class="import">漫画</p> -->
+              </li>
+              <li id="result-voide">
+                <p class="content">不運場所</p>
+                <!-- <p class="import">漫画</p> -->
+              </li>
+              <li id="result-jinx">
+                <p class="content">不運人物</p>
+                <!-- <p class="import">漫画</p> -->
+              </li>
+            </ul>
+          </div>
+          <div id="result-bottom">
+            <div>
+              <img src="img/Mikujinoyasiro_log_red.png">
+              <h1>みくじの社</h1>
+              <img src="img/muryoumikuji_red.png">
+            </div>
+            <img src="img/Mikujinoyasiro_log_red.png">
+            <p>https:omikuji</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
